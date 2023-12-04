@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* color palet:
+#97B2C7
+#6E0D30
+#005E7A
+#001022
+#E80638 */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.postimg.cc/CxT72YYz/digital-art-artwork-illustration-Mitsubishi-Mitsubishi-Lancer-Evo-X-smoke-2285514-wallhere-com.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-image: fill 0 linear-gradient(#0003,#000);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.container {
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container h1{
+  color: red;
+  font-size: 60px;
+  -webkit-text-stroke: 2px black;
+}
+
+.slogan {
+  text-align: right;
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  /* -webkit-text-stroke: 2px black; */
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  
+  /* font-weight: bold; */
+  font-family: Caveat;
+  color: white;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 13.5rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 0.8s ease infinite 0.5s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Start Landing Page */
+  .landing-page header {
+    min-height: 80px;
+    display: flex;
+  }
+  .landing-page header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .landing-page header .logo {
+    color: white;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 30px;
+    top: 5%;
+    left: 5%;
+    position: absolute;
+  }
+
+  .landing-page header .links {
+    top: 5%;
+    display: flex;
+    position: absolute;
+    right: 10%;
+    justify-content: space-between;
+    z-index: 1;
+    text-decoration: none;
+  }
+
+
+  .landing-page header .links li:last-child {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #E80638;
+    font-weight: bolder;
+
+  }
+  .landing-page header .links li:last-child:hover {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 20px white;
+  }
+
+  .landing-page .content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 140px;
+    min-height: calc(100vh - 80px);
+  }
+
+  footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    text-align: center;
+    color: white;
+  }
+  /* End Landing Page */
+  
+  /* About Page */
+  .about h1{
+    color: black;
+    font-size: 60px;
+    padding-left: 50px;
+  }
+  
+  .about p{
+    margin: 0;
+    font-size: 20px;
+    color: black;
+    padding-top: 15px;
+    padding-left: 50px;
+  }
+  /* Shoes Page */ 
+  
+  
+  /* Clothes Page */
+  .product-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    gap: 20px;
+    padding: 20px;
+    left: 20%;
+    top: 15%;
+  }
+  
+  .product-container .product {
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .product-container .product img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .product-container .price {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  /* Contact Page */
+
+
+  /* Animation Setttings */
+
+  

@@ -28,6 +28,7 @@ body {
   align-items: center;
   transition: background-color 0.3s ease;
 }
+
 .container {
   color: black;
   font-size: 1.5rem;
@@ -39,18 +40,11 @@ body {
   margin-right: auto;
 }
 
-.container h1{
-  color: red;
-  font-size: 60px;
-  -webkit-text-stroke: 2px black;
-}
-
 .slogan {
   text-align: right;
   width: 100%;
   font-size: 2rem;
   color: white;
-  /* -webkit-text-stroke: 2px black; */
 }
 
 .stack {
@@ -59,7 +53,6 @@ body {
 }
 
 .stack span {
-  
   /* font-weight: bold; */
   font-family: Caveat;
   color: white;
@@ -107,6 +100,7 @@ body {
   }
   4%, 100% {  text-shadow: none; transform: none; }
 }
+
   a {
     text-decoration: none;
   }

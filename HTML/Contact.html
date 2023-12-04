@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
+  <div class="landing-page">
   <header>
     <a href="/index.html" class="logo">CarHub-<b>Motors</b></a>
     <ul class="links">
@@ -16,6 +18,30 @@
         <a href="/HTML/Checkout.html"><li>Checkout</li></a>
     </ul>
 </header>
+<main>
+  <div class="form">
+    <form  action="https://formspree.io/f/mjvqjgkr" method="POST">
+      <div class="mb-3">
+        <label for="exampleInputName1" class="form-label">Full name</label>
+        <input type="name" class="form-control" id="exampleInputname1" aria-describedby="nameHelp" required>
+      </div>
+      <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputText1" class="form-label">Message</label>
+      <input type="text" class="form-control" id="exampleInputText1" name="message" required>
+    </div>
+    <button id="send" type="submit" class="btn btn-primary">Send</button>
+  </form>
+</div>
+</section>
+<footer>
+<div class="feet">
+  <p class="text-center text-body-secondary c-white">&copy; 2023 Joel Williams</p>
+</div>
+</main>
 <footer>
   &copy; 2023 Hot Hub Motors | All rights reserved.
 </footer>

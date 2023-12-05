@@ -191,11 +191,7 @@ footer{
   /**************************************************** About Page Styling ***********************************************************************************************/
   .about h1{
     color: white;
-    font-size: 60px;
-    padding-left: 50px;
-    padding-top: 50px;
     font-size: 100px;
-    padding-top: 40px;
     font-family: Caveat;
     text-shadow: 10px 10px 5px #E80638
   }
@@ -203,9 +199,8 @@ footer{
   .about p{
     font-size: 20px;
     color: white;
-    padding-top: 30px;
-    padding-left: 50px;
   }
+  
   /* Shoes Page */ 
   
   

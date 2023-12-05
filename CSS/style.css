@@ -191,14 +191,51 @@ footer{
   /**************************************************** About Page Styling ***********************************************************************************************/
   .about h1{
     color: white;
+    font-size: 60px;
+    padding-left: 50px;
+    padding-top: 50px;
     font-size: 100px;
     padding-top: 40px;
     font-family: Caveat;
-    text-shadow: 10px 10px 5px #E80638;
+    text-shadow: 10px 10px 5px #E80638
   }
   
   .about p{
-    margin: 0;
+    font-size: 20px;
+    color: white;
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+  /* Shoes Page */ 
+  
+  
+  /* Clothes Page */
+  .product-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    gap: 20px;
+    padding: 20px;
+    left: 20%;
+    top: 15%;
+  }
+  
+  .product-container .product {
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .product-container .product img {
+    width: 200px;
+    height: 200px;
     font-size: 25px;
     color: white;
     padding-top: 10px;

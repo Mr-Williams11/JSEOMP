@@ -14,8 +14,9 @@
 #E80638 */
 
 html, body {
+  font-family: Caveat;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(https://i.postimg.cc/CxT72YYz/digital-art-artwork-illustration-Mitsubishi-Mitsubishi-Lancer-Evo-X-smoke-2285514-wallhere-com.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -29,91 +30,177 @@ body {
   transition: background-color 0.3s ease;
 }
 
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(grey,black);
+}
+
+
+  /**************************************************** Home Page Styling ***********************************************************************************************/
+
+.container {
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slogan {
+  text-align: right;
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-family: Caveat;
+  width: 100%;
+  color: white;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 13.5rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 0.8s ease infinite 0.5s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}
+
   a {
     text-decoration: none;
   }
   ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-
-  /* Start Landing Page */
-  .landing-page header {
-    min-height: 80px;
-    display: flex;
-  }
-  .landing-page header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .landing-page header .logo {
-    color: white;
-    font-style: italic;
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-size: 30px;
-    top: 5%;
-    left: 5%;
-    position: absolute;
-  }
-
-  .landing-page header .links {
-    top: 5%;
-    display: flex;
-    position: absolute;
-    right: 10%;
-    justify-content: space-between;
-    z-index: 1;
     text-decoration: none;
   }
 
+  /****************************************************Nav Bar Styling ***********************************************************************************************/
+  .navbar {
+      left: 0;
+      top: 0;
+  }
 
-  .landing-page header .links li:last-child {
-    border-radius: 20px;
-    padding: 10px 20px;
+  #navbar-brand {
+    font-size: 40px;
+    font-style: italic;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #ffffff;
+  }
+
+  .navbar-nav {
+    margin-left: 60%; 
+  }
+
+  .navbar-nav .nav-link {
     color: #E80638;
-    font-weight: bolder;
-
-  }
-  .landing-page header .links li:last-child:hover {
-    border-radius: 20px;
-    padding: 10px 20px;
-    color: white;
-    background-color: black;
-    box-shadow: 0 0 20px white;
+    font-weight: bolder;    
+    text-decoration: transparent;
+    font-family: Caveat;
+    font-size: 25px;
   }
 
-  .landing-page .content .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 140px;
-    min-height: calc(100vh - 80px);
-  }
-
-  footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    text-align: center;
+  .navbar-nav .nav-link:hover {
     color: white;
   }
-  /* End Landing Page */
   
-  /* About Page */
+  input {
+    display: inline-block;
+    max-width: 196px;
+    /* position: absolute; */
+    left: 23%;
+    top: 5%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border: 5px solid #E80638;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    font: normal 19px/normal "Courier New", Courier, monospace;
+    color: white;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(45,45,45,1);
+    box-shadow: 0 0 9px 4px rgba(0,0,0,0.15) , -1px 4px 8px -1px rgba(0,0,0,0.49) inset;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.66);
+  }
+
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  /**************************************************** About Page Styling ***********************************************************************************************/
   .about h1{
     color: white;
     font-size: 60px;
     padding-left: 50px;
     padding-top: 50px;
+    font-size: 100px;
+    padding-top: 40px;
+    font-family: Caveat;
+    text-shadow: 10px 10px 5px #E80638
   }
   
   .about p{
-    margin: 0;
     font-size: 20px;
     color: white;
     padding-top: 30px;
@@ -149,16 +236,21 @@ body {
   .product-container .product img {
     width: 200px;
     height: 200px;
+    font-size: 25px;
+    color: white;
+    padding-top: 10px;
+    font-family: Caveat;
   }
   
-  .product-container .price {
-    font-weight: bold;
-    color: #007BFF;
-  }
   
-  /* Contact Page */
+  /**************************************************** Product Page Styling ***********************************************************************************************/
 
 
-  /* Animation Setttings */
+  /**************************************************** Admin Page Styling ***********************************************************************************************/
 
-  
+
+  /**************************************************** Contact Page Styling ***********************************************************************************************/
+
+
+  /**************************************************** Checkout Page Styling ***********************************************************************************************/
+

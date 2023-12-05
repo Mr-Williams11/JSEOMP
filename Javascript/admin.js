@@ -48,7 +48,7 @@ window.onload = function joel(){
 // these are called nested functions
     function remove(position){
         items.splice(position,1)
-        favourite()
+        idontknow()
         joel()
     }
 
@@ -67,7 +67,7 @@ table.style.color = 'blue'
 table.style.backgroundColor = 'aqua'
 table.style.border = '5px solid black'
 
-function favourite(){
+function idontknow(){
     localStorage.setItem('dealership',JSON.stringify(dealership))
     dealership = JSON.parse(localStorage.getItem('dealership'))
 }

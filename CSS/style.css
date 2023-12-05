@@ -16,7 +16,7 @@
 html, body {
   font-family: Caveat;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(https://i.postimg.cc/CxT72YYz/digital-art-artwork-illustration-Mitsubishi-Mitsubishi-Lancer-Evo-X-smoke-2285514-wallhere-com.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -29,6 +29,19 @@ body {
   align-items: center;
   transition: background-color 0.3s ease;
 }
+
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(grey,black);
+}
+
+
+  /**************************************************** Home Page Styling ***********************************************************************************************/
 
 .container {
   color: black;
@@ -54,7 +67,6 @@ body {
 }
 
 .stack span {
-  /* font-weight: bold; */
   font-family: Caveat;
   width: 100%;
   color: white;
@@ -113,7 +125,7 @@ body {
     text-decoration: none;
   }
 
-  /****************************************************Landing Page ***********************************************************************************************/
+  /****************************************************Nav Bar Styling ***********************************************************************************************/
   .landing-page header {
     min-height: 80px;
     display: flex;
@@ -132,13 +144,13 @@ body {
     top: 5%;
     left: 5%;
     font-family: Caveat;
-    position: absolute;
+    /* position: absolute; */
   }
 
   .landing-page header .links {
     top: 5%;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     right: 10%;
     justify-content: space-between;
     z-index: 1;
@@ -173,19 +185,10 @@ body {
     min-height: calc(100vh - 80px);
   }
 
-  footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    text-align: center;
-    color: white;
-  }
-
   input {
     display: inline-block;
     max-width: 196px;
-    position: absolute;
+    /* position: absolute; */
     left: 23%;
     top: 5%;
     -webkit-box-sizing: content-box;
@@ -214,59 +217,32 @@ body {
     outline: none;
   }
   
-  /**************************************************** About Page ***********************************************************************************************/
+  /**************************************************** About Page Styling ***********************************************************************************************/
   .about h1{
     color: white;
     font-size: 100px;
-    padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 40px;
+    font-family: Caveat;
+    text-shadow: 10px 10px 5px #E80638;
   }
   
   .about p{
     margin: 0;
     font-size: 25px;
     color: white;
-    padding-top: 30px;
-    padding-left: 50px;
+    padding-top: 10px;
+    font-family: Caveat;
   }
   
   
-  /* Products Page */
-  .product-container {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    column-gap: 3rem;
-    gap: 20px;
-    padding: 20px;
-    left: 20%;
-    top: 15%;
-  }
-  
-  .product-container .product {
-    background-color: black;
-    border: 1px solid red;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .product-container .product img {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .product-container .price {
-    font-weight: bold;
-    color: #007BFF;
-  }
-  
-  /* Contact Page */
+  /**************************************************** Product Page Styling ***********************************************************************************************/
 
-  /* Animation Setttings */
 
-  
+  /**************************************************** Admin Page Styling ***********************************************************************************************/
+
+
+  /**************************************************** Contact Page Styling ***********************************************************************************************/
+
+
+  /**************************************************** Checkout Page Styling ***********************************************************************************************/
+

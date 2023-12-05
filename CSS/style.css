@@ -134,6 +134,7 @@ footer{
   #navbar-brand {
     font-size: 40px;
     font-style: italic;
+    font-family: Caveat;
   }
 
   .navbar-toggler-icon {
@@ -157,11 +158,8 @@ footer{
   }
   
   input {
-    display: inline-block;
+    display: flex;
     max-width: 196px;
-    /* position: absolute; */
-    left: 23%;
-    top: 5%;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -200,7 +198,7 @@ footer{
     font-size: 20px;
     color: white;
   }
-  
+
   /* Shoes Page */ 
   
   

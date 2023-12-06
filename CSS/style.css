@@ -232,39 +232,23 @@ body {
   
   
   /* Products Page */
-  .product-container {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    column-gap: 3rem;
-    gap: 20px;
-    padding: 20px;
-    left: 20%;
-    top: 15%;
-  }
-  
-  .product-container .product {
-    background-color: black;
-    border: 1px solid red;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .product-container .product img {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .product-container .price {
-    font-weight: bold;
-    color: #007BFF;
-  }
-  
+table {
+    background: linear-gradient(#E80638, #001022);
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+tr{
+  width: 100vh;
+  font-size: 20px;
+
+}
+td{
+  margin: 20px;
+
+}
+
   /* Contact Page */
 
   /* Animation Setttings */

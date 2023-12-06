@@ -7,7 +7,7 @@ main.innerHTML = items.map(function(item,index){
     return `
         <div>
             <h2>${item.name}</h2>
-            <p>${item.description}</p>
+            <p>${item.model}</p>
             <p>${item.price}</p>
             <button value='${index}' data-add>Add to cart</button>
         </div>

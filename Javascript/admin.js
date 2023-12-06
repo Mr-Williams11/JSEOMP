@@ -30,44 +30,63 @@ dealership = JSON.parse(localStorage.getItem('dealership'))
 
 
 let table = document.querySelector('table')
-window.onload = function joel(){
-    let products = dealership.map(function(car, index){
+function joel() {
+    let products = dealership.map(function (car, index) {
         console.log(car)
         console.log(index)
         return `
-        <tr>
-        <td>${car.carname}</td>
-        <td>${car.model}</td>
-        <td>${car.year}</td>
-        <td>R ${car.price}</td>
-        <td><img src="${car.url}" height="100px" width="100px"></td>
-        <td><button>Edit</button></td>
-        <td><button class = 'delete' value = '${index}'>Del</button></td>
-        </tr>
+
+        <div class="table-responsive">
+  <table class="table">
+        <thead>
+            <tr>
+                <th>Car Name</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>${car.carname}</td>
+                <td>${car.model}</td>
+                <td>${car.year}</td>
+                <td>R ${car.price}</td>
+                <td><img src="${car.url}" height="70px" width="80px"></td>
+            </tr>
+            <tr>
+            <td><button class='edit'>Edit</button></td>
+            <td><button class='delete' value='${index}'>Del</button></td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
         `
-    })  
-    
-// these are called nested functions
-    function remove(position){
-        car.splice(position,1)
-        favourite()
+    })
+    table.innerHTML = products.join('')
+}
+joel()
+    // these are called nested functions
+    function idontknow() {
+        localStorage.setItem('dealership', JSON.stringify(dealership))
+        dealership = JSON.parse(localStorage.getItem('dealership'))
+    }
+    function remove(index) {
+        
+        dealership.splice(index, 1)
+        idontknow()
         joel()
     }
-
-    table.addEventListener('click', function(){
-        if(event.target.classList.contains('delete')){
+    
+    table.addEventListener('click', function (event) {
+        if (event.target.classList.contains('delete')) {
+            alert(event.target.value)
             remove(event.target.value)
             // alert(event.target.value)
         }
     })
-
+    
     let deletebutton = document.querySelector('.delete')
-
-    table.innerHTML = products.join('')
-}
+    
 table.style.color = 'white'
-
-function idontknow(){
-    localStorage.setItem('dealership',JSON.stringify(dealership))
-    dealership = JSON.parse(localStorage.getItem('dealership'))
-}

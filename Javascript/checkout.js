@@ -1,4 +1,4 @@
-let purchased = JSON.parse(localStorage.getItem('purchased'))
+let purchased = JSON.parse(localStorage.getItem('storeitems'))
 
 let table = document.querySelector('table')
 table.innerHTML= purchased.map((item,index)=>{
@@ -8,7 +8,8 @@ table.innerHTML= purchased.map((item,index)=>{
     <td>${item.name}</td>
     <td>${item.description}</td>
     <td>R${item.price}</td>
-    <td><img src='${item.url}'></img></td>
+    <td><img src='${item.url}' height="70px" width="80px"></img></td>
     </tr>
     `
 })
+

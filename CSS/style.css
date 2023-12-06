@@ -195,14 +195,26 @@ footer{
 
   /**************************************************** Product Page Styling ***********************************************************************************************/
 
+#table{
+  background-color: transparent;
+}
+
+  .addToCart{
+  display: flex;
+}
 
   /**************************************************** Admin Page Styling ***********************************************************************************************/
 
 table {
     background: linear-gradient(#E80638, #001022);
-    width: 100%;
+    height: 20px;
     border-collapse: collapse;
     border: 1px solid white;
+}
+
+thead{
+  background-color: black;
+  width: 100%;
 }
 
 tr{
@@ -213,6 +225,10 @@ tr{
 td{
   margin: 20px;
 
+}
+
+.edit, .delete{
+  margin-left: 200px;
 }
 
   /**************************************************** Contact Page Styling ***********************************************************************************************/

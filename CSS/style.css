@@ -68,7 +68,7 @@ footer{
 
 .stack span {
   font-family: Caveat;
-  width: 100%;
+  width: 2000px;
   color: white;
   grid-row-start: 1;
   grid-column-start: 1;

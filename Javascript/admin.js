@@ -67,7 +67,7 @@ window.onload = function joel(){
 }
 table.style.color = 'white'
 
-function favourite(){
+function idontknow(){
     localStorage.setItem('dealership',JSON.stringify(dealership))
     dealership = JSON.parse(localStorage.getItem('dealership'))
 }

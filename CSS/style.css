@@ -68,7 +68,7 @@ footer{
 
 .stack span {
   font-family: Caveat;
-  width: 100%;
+  width: 2000px;
   color: white;
   grid-row-start: 1;
   grid-column-start: 1;
@@ -125,15 +125,16 @@ footer{
     text-decoration: none;
   }
 
-  /****************************************************Nav Bar Styling ***********************************************************************************************/
+  /**************************************************** Nav Bar Styling ***********************************************************************************************/
   .navbar {
       left: 0;
       top: 0;
   }
 
   #navbar-brand {
-    font-size: 40px;
+    font-size: 60px;
     font-style: italic;
+    font-family: Caveat;
   }
 
   .navbar-toggler-icon {
@@ -157,11 +158,8 @@ footer{
   }
   
   input {
-    display: inline-block;
+    display: flex;
     max-width: 196px;
-    /* position: absolute; */
-    left: 23%;
-    top: 5%;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -177,12 +175,6 @@ footer{
     box-shadow: 0 0 9px 4px rgba(0,0,0,0.15) , -1px 4px 8px -1px rgba(0,0,0,0.49) inset;
     text-shadow: 1px 1px 0 rgba(255,255,255,0.66);
   }
-
-  .search__icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: #b4b4b4;
-  }
   
   input:focus {
     outline: none;
@@ -192,25 +184,46 @@ footer{
   .about h1{
     color: white;
     font-size: 100px;
-    padding-top: 40px;
     font-family: Caveat;
-    text-shadow: 10px 10px 5px #E80638;
+    text-shadow: 10px 10px 5px #E80638
   }
   
   .about p{
-    margin: 0;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    padding-top: 10px;
-    font-family: Caveat;
   }
-  
-  
+
   /**************************************************** Product Page Styling ***********************************************************************************************/
 
+  
 
   /**************************************************** Admin Page Styling ***********************************************************************************************/
 
+table {
+    background: linear-gradient(#E80638, #001022);
+    height: 20px;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+thead{
+  background-color: black;
+  width: 100%;
+}
+
+tr{
+  width: 100vh;
+  font-size: 20px;
+
+}
+td{
+  margin: 20px;
+
+}
+
+.edit, .delete{
+  margin-left: 200px;
+}
 
   /**************************************************** Contact Page Styling ***********************************************************************************************/
 

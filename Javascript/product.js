@@ -1,22 +1,32 @@
-let purchased = []
+let storeitems = []
+
 let main = document.querySelector('main')
-let items = JSON.parse(localStorage.getItem('items'))
+let items = JSON.parse(localStorage.getItem('dealership'))
 
-
-main.innerHTML = items.map(function(item,index){
+main.innerHTML = items.map(function (car, index) {
+    console.log(car)
+    console.log(index)
     return `
-        <div>
-            <h2>${item.name}</h2>
-            <p>${item.description}</p>
-            <p>${item.price}</p>
-            <button value='${index}' data-add>Add to cart</button>
-        </div>
-        `
+    <div class="container-fluid">
+ <table>
+        <tr>
+            <td>${car.carname}</td>
+            <td>${car.model}</td>
+            <td>${car.year}</td>
+            <td>R ${car.price}</td>
+            <td><img src="${car.url}" height="70px" width="80px"></td>
+        </tr>
+        <tr>
+        <button class = "addToCart" data-add value = "${index}">Add to Cart</button>
+        </tr>
+    </table>
+    </div>
+    `
 }).join('')
 
 function add(index){
-    purchased.push(items[index])
-    localStorage.setItem('purchased',JSON.stringify(purchased))
+    storeitems.push(items[index])
+    localStorage.setItem('storeitems',JSON.stringify(storeitems))
 }
 
 main.addEventListener('click',function(){
@@ -25,8 +35,3 @@ main.addEventListener('click',function(){
         add(event.target.value)
     }
 })
-
-let a = items.filter(item => {
-    return item.name == 'Nike Shoe' 
-})
-

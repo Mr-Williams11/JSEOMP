@@ -227,6 +227,7 @@ button{
   .card:hover:hover {
     filter: grayscale(0%);
     box-shadow: 30px 30px 5px white;
+    transition: 1s;
   }
   
   .card span {
@@ -247,13 +248,14 @@ button{
     font-size: 1em;
   }
   
-  .card .img {
-    width: 70px;
-    height: 70px;
-    background: transparent;
+  .card .imgee {  
     border-radius: 100%;
     margin: auto;
     margin-top: 20px;
+  }
+
+  .imgee{
+    background-color: transparent;
   }
   
   .card button {

@@ -38,20 +38,23 @@ main.addEventListener('click',function(){
 // Search bar and sorting button function
 
 document.getElementById('searchInput').addEventListener('input', searchFunction);
-document.getElementById('select').addEventListener('change', searchFunction);
 
 function searchFunction() {
     let searchIt = document.getElementById('searchInput').value.toLowerCase();
-    let options = document.getElementById('select').value;
     let sortedProducts = items.filter(item => {
         return item.carname.toLowerCase().includes(searchIt);
     })
 
-    if (options === 'Lowest to Highest') {
-        sortedProducts.sort((a, b) => a.price - b.price);
-    } else if (options === 'Highest to Lowest') {
-        sortedProducts.sort((a, b) => b.price - a.price);
-    }
-
     produce(sortedProducts);
 }
+
+function sorting(){
+    let sortedItems = [...items];
+    sortedItems.sort((a,b) => a.price - b.price);
+    // display the sorted products.
+    produce(sortedItems)
+}
+let sortBtn = document.getElementById('sortBtn');
+sortBtn.addEventListener('click', function(){
+    sorting();
+});

@@ -3,7 +3,8 @@ let storeitems = []
 let main = document.querySelector('main')
 let items = JSON.parse(localStorage.getItem('dealership'))
 
-main.innerHTML = items.map(function (car, index) {
+let produce = function bitchesGotMoney(prod){
+main.innerHTML = prod.map(function (car, index) {
     console.log(car)
     console.log(index)
     return `
@@ -18,7 +19,8 @@ main.innerHTML = items.map(function (car, index) {
     <button class="btn btn-primary addToCart" data-add value="${index}">Add to Cart</button>
     </div>
     `
-}).join('')
+}).join('')};
+produce(items)
 
 
 function add(index){
@@ -32,3 +34,24 @@ main.addEventListener('click',function(){
         add(event.target.value)
     }
 })
+
+// Search bar and sorting button function
+
+document.getElementById('searchInput').addEventListener('input', searchFunction);
+document.getElementById('select').addEventListener('change', searchFunction);
+
+function searchFunction() {
+    let searchIt = document.getElementById('searchInput').value.toLowerCase();
+    let options = document.getElementById('select').value;
+    let sortedProducts = items.filter(item => {
+        return item.carname.toLowerCase().includes(searchIt);
+    })
+
+    if (options === 'Lowest to Highest') {
+        sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (options === 'Highest to Lowest') {
+        sortedProducts.sort((a, b) => b.price - a.price);
+    }
+
+    produce(sortedProducts);
+}

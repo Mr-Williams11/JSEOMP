@@ -34,10 +34,14 @@ footer{
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 60px;
+  height: 50px;
   text-align: center;
   color: white;
   background: linear-gradient(grey,black);
+}
+
+button{
+  padding: 3px;
 }
 
 
@@ -196,34 +200,78 @@ footer{
   /**************************************************** Product Page Styling ***********************************************************************************************/
 
   
+  
 
   /**************************************************** Admin Page Styling ***********************************************************************************************/
-
-table {
-    background: linear-gradient(#E80638, #001022);
-    height: 20px;
-    border-collapse: collapse;
-    border: 1px solid white;
+.table{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-thead{
-  background-color: black;
-  width: 100%;
-}
 
-tr{
-  width: 100vh;
-  font-size: 20px;
 
-}
-td{
-  margin: 20px;
+  .card {
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(144deg,#E80638, #001022 60%,#005E7A);
+    border: none;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin: auto;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    filter: grayscale(90%);
+  }
 
-}
-
-.edit, .delete{
-  margin-left: 200px;
-}
+  .card:hover:hover {
+    filter: grayscale(0%);
+    box-shadow: 30px 30px 5px white;
+  }
+  
+  .card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 1.3em;
+  }
+  
+  .card .job {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1em;
+  }
+  
+  .card .img {
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .card button {
+    padding: 8px 25px;
+    display: block;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    background: #e8e8e8;
+    color: #111111;
+    font-weight: 600;
+  }
+  
+  .card button:hover {
+    background: linear-gradient(144deg,#005E7A, #001022 60%,#E80638);
+    color: #ffffff;
+    filter: grayscale(0%);
+  }
 
   /**************************************************** Contact Page Styling ***********************************************************************************************/
 

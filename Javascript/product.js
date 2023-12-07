@@ -7,22 +7,19 @@ main.innerHTML = items.map(function (car, index) {
     console.log(car)
     console.log(index)
     return `
-    <div class="container-fluid">
- <table>
-        <tr>
-            <td>${car.carname}</td>
-            <td>${car.model}</td>
-            <td>${car.year}</td>
-            <td>R ${car.price}</td>
-            <td><img src="${car.url}" height="70px" width="80px"></td>
-        </tr>
-        <tr>
-        <button class = "addToCart" data-add value = "${index}">Add to Cart</button>
-        </tr>
-    </table>
+    <div class="card">
+    <div class="card-border-top">
+    </div>
+    <div class="img"><img src="${car.url}" height="80px" width="90px"></div>
+    <span>${car.carname}</span>
+        <span>${car.year}</span>
+    <span>${car.model}</span>
+    <p class="job">R ${car.price}</p>
+    <button class="btn btn-primary addToCart" data-add value="${index}">Add to Cart</button>
     </div>
     `
 }).join('')
+
 
 function add(index){
     storeitems.push(items[index])

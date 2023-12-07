@@ -10,5 +10,5 @@ table.innerHTML= purchased.map((car,index)=>{
     <td><img src='${car.url}' height="70px" width="80px"></img></td>
     </tr>
     `
-})
+}).join('')
 

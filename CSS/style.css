@@ -161,7 +161,7 @@ button{
     color: white;
   }
   
-  input {
+  .search {
     display: flex;
     max-width: 196px;
     -webkit-box-sizing: content-box;
@@ -178,10 +178,6 @@ button{
     background: rgba(45,45,45,1);
     box-shadow: 0 0 9px 4px rgba(0,0,0,0.15) , -1px 4px 8px -1px rgba(0,0,0,0.49) inset;
     text-shadow: 1px 1px 0 rgba(255,255,255,0.66);
-  }
-  
-  input:focus {
-    outline: none;
   }
   
   /**************************************************** About Page Styling ***********************************************************************************************/

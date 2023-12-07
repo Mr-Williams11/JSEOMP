@@ -10,7 +10,7 @@ main.innerHTML = items.map(function (car, index) {
     <div class="card">
     <div class="card-border-top">
     </div>
-    <div class="imgee"><img src="${car.url}" height="100px" width="90px"></div>
+    <div class="imgee"><img src="${car.url}" height="100px" width="120px"></div>
     <span>${car.carname}</span>
         <span>${car.year}</span>
     <span>${car.model}</span>

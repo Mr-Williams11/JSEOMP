@@ -21,7 +21,6 @@ let car5 = new Carconstructor("Toyota", "Supra MK4", 2022, 25000, "https://i.pos
 dealership.push(car1, car2, car3, car4, car5);
 
 // sets array from the local storage to array(items) in code
-// JSON.parse turns the string into an object
 localStorage.setItem('dealership', JSON.stringify(dealership));
 dealership = JSON.parse(localStorage.getItem('dealership'));
 
@@ -49,6 +48,10 @@ function joel() {
                     <td>${car.year}</td>
                     <td>R ${car.price}</td>
                     <td><img src="${car.url}" height="70px" width="80px" class="img-fluid" alt="Car Image"></td>
+                    <td>
+                        <button class='btn btn-warning edit' value='${index}'>Edit</button>
+                        <button class='btn btn-danger delete' value='${index}'>Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -195,12 +198,17 @@ function closeModal(modalId) {
 }
 
 // spinner function
-if (dealership.length === 0) {
-    table.innerHTML = `
-    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div>
-    `;
-} else {
-    joel(dealership);
+function spinner(){
+    if (dealership.length === 0) {
+        spin.innerHTML += `
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        `
+    } else {
+        joel(dealership);
+    }
+    
 }
+spinner()
+let spin = Document.querySelector('.spin')

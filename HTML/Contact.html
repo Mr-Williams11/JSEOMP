@@ -11,7 +11,7 @@
 <body>
   <div class="landing-page">  
     <header>
-      <nav class="navbar navbar-expand-md position-absolute p-4 w-100">
+      <nav class="navbar navbar-expand-md position-absolute w-100">
         <a class="navbar-brand text-white" id="navbar-brand" href="/index.html">CarHub-<b>Motors</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,29 @@
         </div>
       </nav>
 </header>
+<div class="contact">
+  <h1>Contact Us:</h1>
+  <p>Email: CarHubMotors@gmail.com</p>
+  <p>Phone Number: 068 489 6648</p>
+</div>
     <main>
-      
+      <div class="form">
+        <form  action="https://formspree.io/f/mjvqjgkr" method="POST">
+          <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Full name</label>
+            <input type="name" class="form-control" id="exampleInputname1" aria-describedby="nameHelp" required>
+          </div>
+          <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="Email" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputText1" class="form-label">Message</label>
+          <input type="text" class="form-control" id="exampleInputText1" name="message" required>
+        </div>
+        <button id="send" type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
     </main>
   </div>
 <footer>

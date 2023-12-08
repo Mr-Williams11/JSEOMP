@@ -11,7 +11,7 @@
 <body>
     <div class="landing-page">
         <header>
-            <nav class="navbar navbar-expand-md position-absolute p-4 w-100">
+            <nav class="navbar navbar-expand-md position-absolute w-100">
               <a class="navbar-brand text-white" id="navbar-brand" href="/index.html">CarHub-<b>Motors</b></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,12 +38,75 @@
         <table>
 
         </table>
+        <button type="button" id="addNewButton" class="btn btn-primary">Add New Product</button>
+
+        <div class="modal" tabindex="-1" id="addNewModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Add New Product</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" id="addNewModalBody">
+                      <!-- Content for adding a new product goes here -->
+                      <form>
+                          <div class="mb-3">
+                              <label for="newCarName" class="form-label">Car Name:</label>
+                              <input type="text" class="form-control" id="newCarName" placeholder="Enter car name">
+                          </div>
+                          <div class="mb-3">
+                              <label for="newModel" class="form-label">Model:</label>
+                              <input type="text" class="form-control" id="newModel" placeholder="Enter model">
+                          </div>
+                          <div class="mb-3">
+                              <label for="newYear" class="form-label">Year:</label>
+                              <input type="number" class="form-control" id="newYear" placeholder="Enter year">
+                          </div>
+                          <div class="mb-3">
+                              <label for="newPrice" class="form-label">Price:</label>
+                              <div class="input-group">
+                                  <span class="input-group-text">R</span>
+                                  <input type="number" class="form-control" id="newPrice" placeholder="Enter price">
+                              </div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="newImageUrl" class="form-label">Image URL:</label>
+                              <input type="text" class="form-control" id="newImageUrl" placeholder="Enter image URL">
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" id="closModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" id="saveNewProductBtn" class="btn btn-primary">Save New Product</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        
+      <div class="modal" tabindex="-1" id="infoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveChangesBtn" class="btn btn-secondary" data-bs-dismiss="modal">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </main>
 </div>
     <footer>
         &copy; 2023 Hot Hub Motors | All rights reserved.
       </footer>
     <script src="/Javascript/admin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

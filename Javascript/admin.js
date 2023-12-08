@@ -123,7 +123,7 @@ function saveChanges() {
     let newPrice = parseInt(document.getElementById('newPrice').value);
     let newUrl = document.getElementById('newUrl').value;
 
-    // Update the existing product
+// Updating the existing product
     let carToEdit = dealership[editIndex];
     carToEdit.carname = newCarName || carToEdit.carname;
     carToEdit.model = newModel || carToEdit.model;
@@ -131,15 +131,14 @@ function saveChanges() {
     carToEdit.price = newPrice || carToEdit.price;
     carToEdit.url = newUrl || carToEdit.url;
 
-    // Save changes to local storage
+// Saving changes to local storage
     idontknow();
     joel();
 }
-
 // Variable to store the index of the car being edited
 let editIndex;
 
-// Event listener for "Edit" button
+// Event listener for my "Edit" button
 table.addEventListener('click', function (event) {
     if (event.target.classList.contains('edit')) {
         editIndex = event.target.value;
@@ -147,16 +146,16 @@ table.addEventListener('click', function (event) {
     }
 });
 
-// Event listener for "Save Changes" button in the modal
+// Event listener for my "Save Changes" button
 document.getElementById('saveChangesBtn').addEventListener('click', saveChanges);
 
-// Event listener for opening the modal when "Add New Product" button is clicked
+// Event listener for my"Add New Product" button
 document.getElementById('addNewButton').addEventListener('click', openAddModal);
 
-// Event listener for saving the new product when "Save New Product" button is clicked
+// Event listener for my "Save New Product" button
 document.getElementById('saveNewProductBtn').addEventListener('click', function () {
     saveNewProduct();
-    closeModal('addNewModal'); // Updated modal ID
+    closeModal('addNewModal');
 });
 
 // Function to open the add modal
